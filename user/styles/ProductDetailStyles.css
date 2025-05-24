@@ -1,0 +1,58 @@
+
+/* Test */
+
+.product_name {
+    border-bottom: 1px solid #ccc;
+}
+
+.product_name p {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+span i.fa-star {
+    color: #fe9727;;
+}
+
+.product_price {
+    background: linear-gradient(100deg,rgb(146 0 9),rgb(212 6 6));
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.price span{
+    color: #fff;
+}
+
+.event_time span, .event span {
+    color: #fff;
+    font-size: 12px;
+}
+
+.sale {
+    font-weight: 700;
+    color: #fdfd00;
+    font-size: 14px;
+    font-style: normal;
+}
+
+.fake {
+    color: #fff;
+    text-decoration: line-through;
+    font-size: 14px;
+    font-style: normal;
+}
+
+.product_gift {
+    border: 1px dashed #189eff;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.gift_list i {
+    color: rgb(0,153,0);
+}
+
+.benefit-item span {
+    font-size: 14px;
+}

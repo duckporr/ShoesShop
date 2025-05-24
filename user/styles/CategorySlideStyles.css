@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.containerCategorySlide {
+  margin-top: 20px;
+}
+
+.slider-wrapper {
+  position: relative;
+}
+
+.slider-wrapper .slide-button {
+  position: absolute;
+  top: 40%;
+  outline: none;
+  border: none;
+  height: 40px;
+  width: 40px;
+  z-index: 5;
+  color: #fff;
+  display: flex;
+  cursor: pointer;
+  font-size: 2.2rem;
+  background: rgb(188, 175, 175);
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transform: translateX(45%);
+}
+
+.slider-wrapper .slide-button:hover {
+  background: #404040;
+}
+
+.slider-wrapper .slide-button#prev-slide {
+  left: -45px;
+}
+
+.slider-wrapper .slide-button#next-slide {
+  right: -11px;
+}
+
+.slider-wrapper .image-list {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 18px;
+  font-size: 0;
+  list-style: none;
+  /* margin-bottom: 30px; */
+  overflow-x: auto;
+  scrollbar-width: none;
+  transition: left 0.6s ease-in-out;
+}
+
+.slider-wrapper .image-list::-webkit-scrollbar {
+  display: none;
+}
+
+.slider-wrapper .image-list .image-item {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.card-image {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: 10px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+}
+
+.container .slider-scrollbar {
+  height: 24px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.slider-scrollbar .scrollbar-track {
+  background: #ccc;
+  width: 100%;
+  height: 2px;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  position: relative;
+}
+
+.slider-scrollbar:hover .scrollbar-track {
+  height: 4px;
+}
+
+.slider-scrollbar .scrollbar-thumb {
+  position: absolute;
+  background: #000;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  height: 100%;
+  cursor: grab;
+  border-radius: inherit;
+}
+
+.slider-scrollbar .scrollbar-thumb:active {
+  cursor: grabbing;
+  height: 8px;
+  top: -2px;
+}
+
+.slider-scrollbar .scrollbar-thumb::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -10px;
+  bottom: -10px;
+}
+
+.item {
+  padding: 0 50px;
+  transition: all .25s ease;
+}
+
+.item>a {
+  text-decoration: none;
+  color: #000;
+}
+
+.item:hover {
+  transform: translateY(-.6rem);
+}
+
+.name {
+
+  font-size: 18px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Styles for mobile and tablets */
+@media only screen and (max-width: 1023px) {
+  .slider-wrapper .slide-button {
+    display: none !important;
+  }
+
+  .slider-wrapper .image-list {
+    gap: 10px;
+    margin-bottom: 15px;
+    scroll-snap-type: x mandatory;
+  }
+
+  .slider-wrapper .image-list .image-item {
+    width: 100px;
+    height: 100px;
+  }
+
+  .slider-scrollbar .scrollbar-thumb {
+    width: 20%;
+  }
+}
+
+.image-container .image-list .image-item {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+  /* Adjust the spacing between circular images */
+}
+
+/* Update the scrollbar and track styles */
+.image-container .slider-scrollbar {
+  height: 10px;
+  /* Reduce the height of the scrollbar */
+}
+
+.image-container .slider-scrollbar .scrollbar-thumb {
+  width: 100%;
+  /* Adjust the initial width of the thumb */
+}
+
+.image-container .slider-scrollbar:hover .scrollbar-track {
+  height: 2px;
+  /* Adjust the height of the track on hover */
+}
+
+/* Additional styles for mobile and tablets */
+@media only screen and (max-width: 1023px) {
+  .image-container .slider-wrapper .image-list .image-item {
+    width: 80px;
+    /* Adjust the width of circular images for smaller screens */
+    height: 80px;
+  }
+}
