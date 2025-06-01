@@ -106,7 +106,7 @@ if ($stmt_data_w) {
             <?php endif; ?>
 
             <form method="GET" class="mb-3">
-                <input type="hidden" name="page" value="InventoryTransactions">
+                <input type="hidden" name="page" value="Inventory">
                 <input type="hidden" name="limit_w" value="<?php echo htmlspecialchars($limit_w); ?>">
                 <input type="hidden" name="page_w" value="1">
                 <div class="input-group">
@@ -115,7 +115,7 @@ if ($stmt_data_w) {
                            value="<?php echo htmlspecialchars($search_w); ?>">
                     <button class="btn btn-outline-primary" type="submit"><i class="fa-solid fa-magnifying-glass"></i> Tìm</button>
                     <?php if (!empty($search_w)): ?>
-                        <a href="?page=InventoryTransactions&limit_w=<?php echo htmlspecialchars($limit_w); ?>&page_w=1" class="btn btn-outline-secondary"><i class="fa-solid fa-times"></i> Xóa tìm</a>
+                        <a href="?page=inventory&limit_w=<?php echo htmlspecialchars($limit_w); ?>&page_w=1" class="btn btn-outline-secondary"><i class="fa-solid fa-times"></i> Xóa tìm</a>
                     <?php endif; ?>
                 </div>
             </form>

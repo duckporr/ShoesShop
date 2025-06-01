@@ -23,9 +23,8 @@ $getTableDataSql = "";
 
 if (isset($_GET['search'])) {
     $getTableDataSql = "SELECT * FROM tbl_order
-    inner join tbl_status  on tbl_status.id = tbl_order.status_id
     WHERE
-        tbl_order. LIKE N'%" . $search . "%'
+        tbl_order.code LIKE N'%" . $search . "%'
     LIMIT $start, $pageSize";
 } else {
     $getTableDataSql = "SELECT * FROM tbl_order
